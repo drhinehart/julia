@@ -1,0 +1,17 @@
+%p
+  -if user_signed_in?
+    Welcome, 
+    %strong= "#{current_user.name}"
+    [
+    /%a{:href => "#{dashboard_path}"} My Dashboard
+    /|
+    %a{:href => "#{destroy_user_session_path}"} Log out
+    ] 
+  -else
+    Welcome,
+    %strong Visitor
+    [
+    %a{:href => "#{new_user_registration_path}"} Register
+    |
+    %a{:href => "#{new_user_session_path}"} Login
+    ] 

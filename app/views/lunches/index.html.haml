@@ -1,0 +1,18 @@
+%h1 Listing lunches
+
+%table
+  %tr
+    %th Lunch Date
+    %th Vote Open
+    %th Vote Close
+
+- @lunches.each do |lunch|
+  %tr{class: "#{cycle('off','on')}"}
+    %td lunch.lunch_date.to_s
+    %td lunch.vote_open.to_s
+    %td lunch.vote_close.to_s
+    %td link_to 'Vote', new_vote_path(lunch)
+    %td link_to 'Tally', tally_path(lunch)
+    %td link_to 'Edit', edit_lunch_path(lunch)
+
+<%= link_to 'New lunch', new_lunch_path %>

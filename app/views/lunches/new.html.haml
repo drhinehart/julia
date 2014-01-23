@@ -1,0 +1,10 @@
+%h1 New Lunch
+
+= semantic_form_for @lunch do |f|
+  =f.error_messages
+  =f.inputs do
+    =f.input :lunch_date, :as => :date_picker
+    =f.input :vote_open, :as => :date_picker
+    =f.input :vote_close, :as => :date_picker
+    =f.input :lunch_places, :as => :select, :collection => @places, :multiple => true
+  =f.actions

@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  do: MyString
+  lunch_id: 1
+  place_id: 1
+
+two:
+  do: MyString
+  lunch_id: 1
+  place_id: 1

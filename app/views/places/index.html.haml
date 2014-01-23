@@ -1,0 +1,13 @@
+%h1 Listing places
+.places
+  %ul
+    - @places.each do |place|
+      %li.place
+        .info
+          %span.title
+            = link_to place.title, place.website unless place.website.blank?
+            = place.title if place.website.blank?
+        %p.address= place.address
+  .new
+    = link_to 'New place', new_place_path
+.map
